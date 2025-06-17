@@ -1,1 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홍길동 - 이력서</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="data/constants.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <a href="#top" class="name-title" id="navbar-name-title"></a>
+        <nav class="navbar-menu">
+            <ul>
+                <li><a href="#intro" id="nav-intro"></a></li>
+                <li><a href="#education" id="nav-education"></a></li>
+                <li><a href="#experience" id="nav-experience"></a></li>
+                <li><a href="#projects" id="nav-projects"></a></li>
+                <li><a href="#skills" id="nav-skills"></a></li>
+                <li><a href="#research" id="nav-research"></a></li>
+                <li><a href="#awards" id="nav-awards"></a></li>
+            </ul>
+        </nav>
+        <div class="lang-toggle">
+            <button id="lang-kor" class="active">KOR</button>
+            <button id="lang-eng">ENG</button>
+        </div>
+    </header>
 
+    <div class="container">
+        <aside class="summary-area">
+            <img src="https://via.placeholder.com/150" alt="Profile Photo" class="profile-photo">
+            <h1 class="name" id="summary-name"></h1>
+            <p class="tagline" id="summary-tagline"></p>
+
+            <div class="summary-section contact-info">
+                <h3 id="summary-contact-title"></h3>
+                <p><i class="fas fa-envelope"></i> <span id="summary-email"></span></p>
+                <p><i class="fas fa-phone"></i> <span id="summary-phone"></span></p>
+                <p><i class="fas fa-map-marker-alt"></i> <span id="summary-location"></span></p>
+            </div>
+
+            <div class="summary-section keywords">
+                <h3 id="summary-keywords-title"></h3>
+                <div class="keyword-tags" id="summary-keywords">
+                    </div>
+            </div>
+
+            <div class="summary-section qualifications">
+                <h3 id="summary-qualifications-title"></h3>
+                <p id="summary-qualification-text"></p>
+            </div>
+
+            <div class="summary-section external-links">
+                <h3 id="summary-links-title"></h3>
+                <p>
+                    <a href="https://github.com/your-github" target="_blank"><i class="fab fa-github"></i> <span id="link-github"></span></a>
+                    <a href="https://linkedin.com/in/your-linkedin" target="_blank"><i class="fab fa-linkedin"></i> <span id="link-linkedin"></span></a>
+                    <a href="https://your-blog.com" target="_blank"><i class="fas fa-blog"></i> <span id="link-blog"></span></a>
+                </p>
+            </div>
+
+            <button class="contact-cta-button" id="contact-cta-button"></button>
+        </aside>
+
+        <main class="contents-area">
+            <section id="intro" class="section">
+                <h2 class="section-title"><i class="fas fa-user"></i> <span id="section-intro-title"></span></h2>
+                <div class="intro-subsection">
+                    <h4 id="intro-self-introduction-subtitle"></h4>
+                    <p id="intro-self-introduction-text"></p>
+                </div>
+                <div class="intro-subsection">
+                    <h4 id="intro-goals-subtitle"></h4>
+                    <p id="intro-goals-text"></p>
+                </div>
+            </section>
+
+            <section id="education" class="section">
+                <h2 class="section-title"><i class="fas fa-graduation-cap"></i> <span id="section-education-title"></span></h2>
+                <div class="timeline" id="education-timeline">
+                    </div>
+            </section>
+
+            <section id="experience" class="section">
+                <h2 class="section-title"><i class="fas fa-briefcase"></i> <span id="section-experience-title"></span></h2>
+                <div id="experience-list">
+                    </div>
+            </section>
+
+            <section id="projects" class="section">
+                <h2 class="section-title"><i class="fas fa-laptop-code"></i> <span id="section-projects-title"></span></h2>
+                <div class="projects-grid" id="projects-grid">
+                    </div>
+            </section>
+
+            <section id="skills" class="section">
+                <h2 class="section-title"><i class="fas fa-tools"></i> <span id="section-skills-title"></span></h2>
+                <div id="skills-categories">
+                    </div>
+            </section>
+
+            <section id="research" class="section">
+                <h2 class="section-title"><i class="fas fa-flask"></i> <span id="section-research-title"></span></h2>
+                <div id="research-list">
+                    </div>
+            </section>
+
+            <section id="awards" class="section">
+                <h2 class="section-title"><i class="fas fa-award"></i> <span id="section-awards-title"></span></h2>
+                <div id="awards-list">
+                    </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p id="footer-copyright"></p>
+    </footer>
+
+    <div id="contact-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="contact-modal-title"></h3>
+                <button class="modal-close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="contact-modal-description"></p>
+                <form class="contact-form">
+                    <label for="contact-name" id="contact-name-label"></label>
+                    <input type="text" id="contact-name" required>
+
+                    <label for="contact-email" id="contact-email-label"></label>
+                    <input type="email" id="contact-email" required>
+
+                    <label for="contact-message" id="contact-message-label"></label>
+                    <textarea id="contact-message" rows="5" required></textarea>
+
+                    <p class="form-message" id="contact-form-message" style="display: none;"></p>
+
+                    <div class="modal-footer">
+                        <button type="submit" id="contact-send-button"></button>
+                        <button type="button" class="btn-close" id="contact-modal-close-button"></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="project-detail-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="project-detail-title"></h3>
+                <button class="modal-close-button">&times;</button>
+            </div>
+            <div class="modal-body project-detail-modal-body">
+                <p><strong id="project-detail-objective-label"></strong>: <span id="project-detail-objective"></span></p>
+                <p><strong id="project-detail-contribution-label"></strong>: <span id="project-detail-contribution"></span></p>
+                <p><strong id="project-detail-result-label"></strong>: <span id="project-detail-result"></span></p>
+                <a href="#" target="_blank" class="project-link" id="project-detail-link"><i class="fas fa-external-link-alt"></i> <span id="project-detail-view-project-button"></span></a>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-close" id="project-detail-modal-close-button"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
